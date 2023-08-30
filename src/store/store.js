@@ -32,7 +32,6 @@ export const store = configureStore({
   reducer: {
     // auth: persistReducer(authPersistConfig, authReducer),
     theme: persistReducer(themePersistConfig, modeThemeReducer),
-    // theme: modeThemeReducer,
     contacts: contactsReducer,
     filter: filterReducer,
     sortby: sortbyReducer,

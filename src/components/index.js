@@ -11,3 +11,5 @@ export * from 'components/Button/Button.styled';
 export * from 'components/Notification/Notification';
 export * from 'components/Loader/Loader';
 export * from 'components/SortForm/SortForm';
+export * from 'components/Layouts/SharedLayout';
+export * from 'components/UserMenu/UserMenu';

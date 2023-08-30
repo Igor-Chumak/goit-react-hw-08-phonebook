@@ -1,11 +1,16 @@
-import { Route, Routes } from 'react-router-dom';
+import { Routes } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectIsLoading, selectError } from 'store';
+import {
+  Header,
+  Section,
+  CreateThemeSwitcher,
+  ContactForm,
+  ContactList,
+  Filter,
+  Loader,
+} from 'components';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import { Loader, SharedLayout } from 'components';
-import HomePage from 'pages/HomePage';
-import RegisterPage from 'pages/RegisterPage';
-import LoginPage from 'pages/LoginPage';
 Notify.init({
   width: '500px',
   fontSize: '25px',
@@ -33,12 +38,19 @@ export const App = () => {
   const error = useSelector(selectError);
   return (
     <>
-      <Routes>
-        <Route path="/" element={<SharedLayout />} />
-        <Route index element={<HomePage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/login" element={<LoginPage />} />
-      </Routes>
+      <Routes></Routes>
+      {/* <Header>
+        <CreateThemeSwitcher />
+      </Header>
+      <main>
+        <Section title="Phonebook">
+          <ContactForm />
+        </Section>
+        <Section title="Contacts">
+          <Filter />
+          <ContactList />
+        </Section>
+      </main> */}
       {isLoading && <Loader />}
       {error && Notify.warning(error)};
     </>
