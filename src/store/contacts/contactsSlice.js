@@ -3,7 +3,7 @@ import {
   getContactsThunk,
   addContactThunk,
   deleteContactThunk,
-} from 'store/operationsAPI';
+} from 'store/contacts/operationsAPI';
 import {
   handleAddContact,
   handleDeleteContact,
