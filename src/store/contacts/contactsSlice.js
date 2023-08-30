@@ -13,13 +13,15 @@ import {
   handleRejected,
 } from './handlers';
 
+const initialState = {
+  items: [],
+  isLoading: false,
+  error: '',
+};
+
 const contactsSlice = createSlice({
   name: 'contacts',
-  initialState: {
-    items: [],
-    isLoading: false,
-    error: '',
-  },
+  initialState,
   extraReducers: builder => {
     builder
       .addCase(getContactsThunk.fulfilled, handleGetContacts)

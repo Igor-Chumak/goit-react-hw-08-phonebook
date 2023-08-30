@@ -7,6 +7,7 @@ axios.defaults.baseURL = `https://${API_KEY}.mockapi.io/`;
 axios.defaults.headers = {};
 axios.defaults.params = {};
 
+// GET @ /contacts/[:id]
 export const getContactsThunk = createAsyncThunk(
   'contacts/fetch.get',
   async (contactId = '', thunkAPI) => {
@@ -19,6 +20,7 @@ export const getContactsThunk = createAsyncThunk(
   }
 );
 
+// POST @ /contacts
 export const addContactThunk = createAsyncThunk(
   'contacts/fetch.post',
   async (contact, thunkAPI) => {
@@ -31,6 +33,7 @@ export const addContactThunk = createAsyncThunk(
   }
 );
 
+// DELETE @ /contacts/:id
 export const deleteContactThunk = createAsyncThunk(
   'contacts/fetch.delete',
   async (contactId, thunkAPI) => {
@@ -42,19 +45,3 @@ export const deleteContactThunk = createAsyncThunk(
     }
   }
 );
-
-// export const getQuery = (contactId = '') => {
-//   return async dispatch => {
-//     try {
-//       dispatch(fetchingInProgress());
-//       const { data } = await axios.get(`${contactId}`);
-//       dispatch(fetchingSuccess(data));
-//     } catch (error) {
-//       dispatch(
-//         fetchingError(
-//           `${error.message} <- ${error.response.request.statusText}`
-//         )
-//       );
-//     }
-//   };
-// };

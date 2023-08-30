@@ -10,34 +10,33 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-// import { reducer } from './reducers';
-import { combineReducers } from 'redux';
 import { LOCAL_STORAGE_KEY } from 'store/contacts/constants';
 import { sortbyReducer } from './contacts/sortbySlice';
 import { contactsReducer } from './contacts/contactsSlice';
 import { modeThemeReducer } from './theme/themeSlice';
 import { filterReducer } from './contacts/filterSlice';
+// import { authReducer } from './auth/slice';
 
-const persistConfigTheme = {
+const themePersistConfig = {
   key: LOCAL_STORAGE_KEY + '_theme',
   storage,
 };
 
-const persistedReducerTheme = persistReducer(
-  persistConfigTheme,
-  modeThemeReducer
-);
-
-export const reducer = combineReducers({
-  theme: persistedReducerTheme,
-  // theme: modeThemeReducer,
-  contacts: contactsReducer,
-  filter: filterReducer,
-  sortby: sortbyReducer,
-});
+// const authPersistConfig = {
+//   key: 'auth',
+//   storage,
+//   whitelist: ['token'],
+// };
 
 export const store = configureStore({
-  reducer: reducer,
+  reducer: {
+    // auth: persistReducer(authPersistConfig, authReducer),
+    theme: persistReducer(themePersistConfig, modeThemeReducer),
+    // theme: modeThemeReducer,
+    contacts: contactsReducer,
+    filter: filterReducer,
+    sortby: sortbyReducer,
+  },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {

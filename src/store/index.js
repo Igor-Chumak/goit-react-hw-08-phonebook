@@ -1,11 +1,13 @@
 export * from 'store/store';
-// export * from 'store/reducers';
+export * from 'store/contacts/constants';
 export * from 'store/contacts/selectors';
 export * from 'store/contacts/contactsSlice';
 export * from 'store/contacts/filterSlice';
 export * from 'store/contacts/sortbySlice';
 export * from 'store/contacts/handlers';
-export * from 'store/contacts/constants';
 export * as api from 'store/contacts/operationsAPI';
 export * from 'store/theme/themeSlice';
 export * from 'store/theme/selectorsTheme';
+export * from 'store/auth/slice';
+export * from 'store/auth/selectors';
+export * from 'store/auth/operations';
