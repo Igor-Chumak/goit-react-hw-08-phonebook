@@ -5,3 +5,5 @@ export const SORT_BY = {
   AZ_SORT: 'azsort',
   ZA_SORT: 'zasort',
 };
+
+export const ISLOGGEDIN = true;

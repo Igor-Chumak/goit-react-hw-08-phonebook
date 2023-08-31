@@ -1,4 +1,4 @@
-const UserMenu = () => {
+export const UserMenu = () => {
   return (
     <div>
       <p>mango@mail.com</p>
@@ -6,5 +6,3 @@ const UserMenu = () => {
     </div>
   );
 };
-
-export default UserMenu;

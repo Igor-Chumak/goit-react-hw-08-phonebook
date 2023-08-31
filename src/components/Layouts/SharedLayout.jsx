@@ -1,18 +1,16 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
-import { Header, NavLinkStyled } from './SharedLayout.styled';
-import { Loader } from 'components';
+import { Header } from './SharedLayout.styled';
+import { Loader, Navigation, UserMenu, AuthNav } from 'components';
+import { ISLOGGEDIN } from 'store';
 
 export const SharedLayout = () => {
+  const isLoggedIn = ISLOGGEDIN;
   return (
     <div>
       <Header>
-        <nav>
-          <NavLinkStyled to="/" end>
-            Home
-          </NavLinkStyled>
-          <NavLinkStyled to="movies">Movies</NavLinkStyled>
-        </nav>
+        <Navigation />
+        {isLoggedIn ? <UserMenu /> : <AuthNav />}
       </Header>
       <Suspense fallback={<Loader />}>
         <Outlet />

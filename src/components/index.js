@@ -12,4 +12,8 @@ export * from 'components/Notification/Notification';
 export * from 'components/Loader/Loader';
 export * from 'components/SortForm/SortForm';
 export * from 'components/Layouts/SharedLayout';
+export * from 'components/Navigation/Navigation';
 export * from 'components/UserMenu/UserMenu';
+export * from 'components/AuthNav/AuthNav';
+export * from 'components/PrivateRoute';
+export * from 'components/RestrictedRoute';
