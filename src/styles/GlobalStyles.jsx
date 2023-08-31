@@ -14,7 +14,6 @@ export const GlobalStyles = createGlobalStyle`
       'Helvetica Neue', sans-serif;
     /* background: ${theme.colors.mainBackground}; */
     min-height: 100vh;
-
     font-style: normal;
   }
 

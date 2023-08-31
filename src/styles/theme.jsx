@@ -1,3 +1,5 @@
+import bgimage from 'image/pexels-tom-van-dyck-1280x853.jpg';
+
 export const theme = Object.freeze({
   colors: {
     accent: '#2196F3',
@@ -31,11 +33,15 @@ export const theme = Object.freeze({
 });
 
 export const darkTheme = {
-  body: ['linear-gradient(to bottom, #262626,  #e2e2e2)'],
+  body: [
+    `linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),           url(${bgimage})`,
+  ],
+  // body: ['linear-gradient(to bottom, #262626,  #e2e2e2)'],
   textColor: '#fff',
 };
 
 export const lightTheme = {
-  body: ['linear-gradient(to bottom, #c9d6ff,  #e2e2e2)'],
+  body: [`url(${bgimage}) no-repeat  top left/cover`],
+  // body: ['linear-gradient(to bottom, #c9d6ff,  #e2e2e2)'],
   textColor: '#000',
 };

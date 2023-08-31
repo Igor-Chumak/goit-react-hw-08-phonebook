@@ -2,10 +2,16 @@ import { Route, Routes } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectIsLoading, selectError } from 'store';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import { Loader, SharedLayout } from 'components';
+import {
+  Loader,
+  PrivateRoute,
+  RestrictedRoute,
+  SharedLayout,
+} from 'components';
 import HomePage from 'pages/HomePage';
 import RegisterPage from 'pages/RegisterPage';
 import LoginPage from 'pages/LoginPage';
+import ContactsPage from 'pages/ContactsPage';
 Notify.init({
   width: '500px',
   fontSize: '25px',
@@ -52,6 +58,18 @@ export const App = () => {
                 redirectTo="/contacts"
                 component={<LoginPage />}
               />
+            }
+          />
+          <Route
+            path="/contacts"
+            element={
+              <PrivateRoute redirectTo="/login" component={<ContactsPage />} />
+            }
+          />
+          <Route
+            path="*"
+            element={
+              <PrivateRoute redirectTo="/login" component={<ContactsPage />} />
             }
           />
         </Route>
