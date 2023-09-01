@@ -10,7 +10,7 @@ export const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
 
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 `;
 
 export const ContainerHomePage = styled(Container)`
