@@ -1,8 +1,12 @@
+import { ButtonLogOut, UserName, Wrapper } from './UserMenu.styled';
+
 export const UserMenu = () => {
   return (
-    <div>
-      <p>mango@mail.com</p>
-      <button>Logout</button>
-    </div>
+    <Wrapper>
+      <UserName>Welcome, Igor</UserName>
+      <ButtonLogOut type="button" onClick={() => console.log('LogOut ...')}>
+        Logout
+      </ButtonLogOut>
+    </Wrapper>
   );
 };
