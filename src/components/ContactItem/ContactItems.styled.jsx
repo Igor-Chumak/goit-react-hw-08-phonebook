@@ -9,13 +9,19 @@ export const ContactItem = styled.li`
   color: inherit;
   font-weight: normal;
   font-size: 20px;
-  border-bottom: 1px solid ${props => props.theme.colors.darkgrey};
+  border-color: inherit;
+  border-bottom: 1px solid;
 
   &::before {
     display: inline-block;
     padding-right: 8px;
     color: inherit;
     content: '•';
+  }
+
+  &:hover,
+  &:focus {
+    color: red;
   }
 
   &:last-child {
