@@ -19,7 +19,7 @@ export const ButtonLogOut = styled.button`
   padding: 8px 12px;
   /* border: 1px solid black; */
   /* color: black; */
-  color: #999901;
+  color: #f5f5e3;
   font-weight: 700;
   font-size: 16px;
   /* text-decoration: none; */
