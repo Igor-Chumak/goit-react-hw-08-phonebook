@@ -1,14 +1,21 @@
 import PropTypes from 'prop-types';
-import { Container } from 'components';
+import { Container, CreateThemeSwitcher } from 'components';
+import { HeaderBar } from './Header.styled';
 
 export const Header = ({ children }) => {
   return (
-    <header>
-      <Container>{children}</Container>
-    </header>
+    <HeaderBar>
+      <Container>
+        {children}
+        <CreateThemeSwitcher />
+      </Container>
+    </HeaderBar>
   );
 };
 
 Header.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
+  ]),
 };

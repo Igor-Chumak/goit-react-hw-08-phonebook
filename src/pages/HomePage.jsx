@@ -1,9 +1,13 @@
+import { ContainerHome } from 'components';
+
 const HomePage = () => {
   return (
-    <div>
-      <h1> Welcome to homepage "Phonebook"</h1>;
-      <h2> This project was created by Igor Chumak & GoIT</h2>;
-    </div>
+    <ContainerHome>
+      <h1 style={{ fontSize: '40px', textAlign: 'center' }}>
+        Welcome to homepage "Phonebook"{' '}
+      </h1>
+      <h2>&#169; Igor Chumak & GoIT</h2>;
+    </ContainerHome>
   );
 };
 

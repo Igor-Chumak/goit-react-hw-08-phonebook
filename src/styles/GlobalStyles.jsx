@@ -13,7 +13,7 @@ export const GlobalStyles = createGlobalStyle`
       'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
       'Helvetica Neue', sans-serif;
     /* background: ${theme.colors.mainBackground}; */
-    min-height: 100vh;
+    /* max-height: 100vh; */
     font-style: normal;
   }
 

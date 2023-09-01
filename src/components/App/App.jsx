@@ -1,3 +1,4 @@
+import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectIsLoading, selectError } from 'store';
@@ -8,10 +9,10 @@ import {
   RestrictedRoute,
   SharedLayout,
 } from 'components';
-import HomePage from 'pages/HomePage';
-import RegisterPage from 'pages/RegisterPage';
-import LoginPage from 'pages/LoginPage';
-import ContactsPage from 'pages/ContactsPage';
+const HomePage = lazy(() => import('pages/HomePage'));
+const RegisterPage = lazy(() => import('pages/RegisterPage'));
+const LoginPage = lazy(() => import('pages/LoginPage'));
+const ContactsPage = lazy(() => import('pages/ContactsPage'));
 Notify.init({
   width: '500px',
   fontSize: '25px',

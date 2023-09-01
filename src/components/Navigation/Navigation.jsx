@@ -3,7 +3,7 @@ import { ISLOGGEDIN } from 'store';
 import { NavLinkStyled } from './Navigation.styled';
 
 export const Navigation = () => {
-  const isLoggedIn = ISLOGGEDIN;
+  const isLoggedIn = true; //ISLOGGEDIN;
   console.log('Navigation isLoggedIn :>> ', isLoggedIn);
   return (
     <nav>
