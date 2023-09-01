@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { selectModeTheme, setModeTheme } from 'store';
-import style from './CreateThemeSwitcher.module.css';
+import style from './CreateThemeSwitcher_v1.module.css';
 
 export const CreateThemeSwitcher = () => {
   const dispatch = useDispatch();

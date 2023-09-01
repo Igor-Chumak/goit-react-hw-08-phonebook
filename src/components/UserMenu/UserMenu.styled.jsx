@@ -35,6 +35,6 @@ export const ButtonLogOut = styled.button`
   }
 
   &:last-child {
-    margin-right: ${props => props.theme.spacing(15)};
+    margin-right: ${props => props.theme.spacing(30)};
   }
 `;

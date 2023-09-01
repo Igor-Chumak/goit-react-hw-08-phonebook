@@ -25,7 +25,11 @@ export const NavLinkStyled = styled(NavLink)`
     /* border: none; */
   }
 
-  &:last-child {
-    margin-right: ${props => props.theme.spacing(15)};
+  /* &:last-child {
+    margin-right: ${props => props.theme.spacing(30)};
+  } */
+
+  &[data-last] {
+    margin-right: ${props => props.theme.spacing(30)};
   }
 `;
