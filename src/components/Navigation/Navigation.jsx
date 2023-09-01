@@ -1,5 +1,5 @@
 import {} from 'react-redux';
-import { ISLOGGEDIN } from 'store';
+// import { ISLOGGEDIN } from 'store';
 import { NavLinkStyled } from './Navigation.styled';
 
 export const Navigation = () => {

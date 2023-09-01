@@ -39,7 +39,7 @@ export const App = () => {
   return (
     <>
       <Routes></Routes>
-      {/* <Header>
+      <Header>
         <CreateThemeSwitcher />
       </Header>
       <main>
@@ -50,7 +50,7 @@ export const App = () => {
           <Filter />
           <ContactList />
         </Section>
-      </main> */}
+      </main>
       {isLoading && <Loader />}
       {error && Notify.warning(error)};
     </>
