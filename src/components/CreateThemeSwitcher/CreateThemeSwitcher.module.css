@@ -1,15 +1,25 @@
+:root {
+    --widthThemeSwitch: 40px;
+    --heightThemeSwitch: 25px;
+}
+
 .switchBox {
     position: absolute;
-    top: 6px;
-    right: 10px;
+    top: calc(50% - var(--heightThemeSwitch) / 2);
+    right: calc(0% + var(--widthThemeSwitch) / 2);
+    width: var(--widthThemeSwitch);
+    height: var(--heightThemeSwitch);
+    /* transform: translate(-50%, 50%) */
+    /* top: 6px;
+    right: 10px; */
 }
 
 /* The switch - the box around the slider */
 .switch {
     position: relative;
     display: inline-block;
-    width: 40px;
-    height: 25px;
+    width: var(--widthThemeSwitch);
+    height: var(--heightThemeSwitch);
 }
 
 /* Hide default HTML checkbox */

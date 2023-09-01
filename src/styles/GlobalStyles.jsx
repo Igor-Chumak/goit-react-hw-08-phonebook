@@ -2,18 +2,20 @@ import { createGlobalStyle } from 'styled-components';
 import { theme } from 'styles/theme';
 
 export const GlobalStyles = createGlobalStyle`
+
   html {
     box-sizing: border-box;
     scroll-behavior: smooth;
   }
 
   body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    /* margin: 0; */
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
       'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
       'Helvetica Neue', sans-serif;
     /* background: ${theme.colors.mainBackground}; */
     /* max-height: 100vh; */
+    height: 100vh;
     font-style: normal;
   }
 

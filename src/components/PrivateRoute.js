@@ -10,7 +10,8 @@ import { ISLOGGEDIN } from 'store';
 export const PrivateRoute = ({ component: Component, redirectTo = '/' }) => {
   // const { isLoggedIn, isRefreshing } = useAuth();
   // const shouldRedirect = !isLoggedIn && !isRefreshing;
-  const shouldRedirect = !ISLOGGEDIN;
+  const shouldRedirect = ISLOGGEDIN;
+  console.log('PrivateRoute shouldRedirect :>> ', shouldRedirect);
 
   return shouldRedirect ? <Navigate to={redirectTo} /> : Component;
 };

@@ -13,11 +13,20 @@ export const Container = styled.div`
   outline: 1px solid red;
 `;
 
-export const ContainerHome = styled(Container)`
+export const ContainerHomePage = styled(Container)`
   height: calc(100vh - 77px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: ${props => props.theme.spacing(4)};
+`;
+
+export const ContainerHeader = styled(Container)`
+  /* height: calc(100vh - 77px); */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: ${props => props.theme.spacing(2)};
 `;

@@ -1,13 +1,13 @@
-import { ContainerHome } from 'components';
+import { ContainerHomePage } from 'components';
 
 const HomePage = () => {
   return (
-    <ContainerHome>
+    <ContainerHomePage>
       <h1 style={{ fontSize: '40px', textAlign: 'center' }}>
         Welcome to homepage "Phonebook"{' '}
       </h1>
       <h2>&#169; Igor Chumak & GoIT</h2>;
-    </ContainerHome>
+    </ContainerHomePage>
   );
 };
 

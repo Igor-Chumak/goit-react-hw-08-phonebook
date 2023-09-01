@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import { Container, CreateThemeSwitcher } from 'components';
+import { ContainerHeader, CreateThemeSwitcher } from 'components';
 import { HeaderBar } from './Header.styled';
 
 export const Header = ({ children }) => {
   return (
     <HeaderBar>
-      <Container>
+      <ContainerHeader>
         {children}
         <CreateThemeSwitcher />
-      </Container>
+      </ContainerHeader>
     </HeaderBar>
   );
 };
