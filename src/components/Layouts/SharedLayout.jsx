@@ -1,10 +1,10 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Loader, Navigation, UserMenu, AuthNav, Header } from 'components';
-import { ISLOGGEDIN } from 'store';
+// import { ISLOGGEDIN } from 'store';
 
 export const SharedLayout = () => {
-  const isLoggedIn = ISLOGGEDIN;
+  const isLoggedIn = false; //ISLOGGEDIN;
   console.log('SharedLayout isLoggedIn :>> ', isLoggedIn);
   return (
     <div>
