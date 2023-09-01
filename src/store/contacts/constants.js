@@ -6,4 +6,4 @@ export const SORT_BY = {
   ZA_SORT: 'zasort',
 };
 
-export const ISLOGGEDIN = false;
+export const ISLOGGEDIN = true;

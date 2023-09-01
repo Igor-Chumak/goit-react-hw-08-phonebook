@@ -11,21 +11,20 @@ export const NavLinkStyled = styled(NavLink)`
   text-decoration: none;
   transition: 0.1s cubic-bezier(0.7, 0.98, 0.86, 0.98);
   /* background-color: ${props => props.theme.bg_color.btn}; */
-  box-shadow: inset rgba(255, 255, 255, 0.2) 8px 8px 18px 5px,
-    inset rgba(0, 0, 0, 0.4) -8px -8px 18px 5px;
+  box-shadow: ${props => props.theme.shadows.btn_vol};
 
   &:hover,
   &:focus {
-    box-shadow: inset rgba(0, 0, 0, 0.4) 8px 8px 18px 5px,
-      inset rgba(255, 255, 255, 0.2) -8px -8px 18px 5px;
+    box-shadow: ${props => props.theme.shadows.btn_vol_hover};
   }
 
   &.active {
     color: red;
-    box-shadow: inset rgba(255, 255, 255, 0.2) 8px 8px 18px 5px,
-      inset rgba(0, 0, 0, 0.4) -8px -8px 18px 5px;
-
     /* background-color: ${props => props.theme.bg_color.btn_active}; */
     /* border: none; */
+  }
+
+  &:last-child {
+    margin-right: ${props => props.theme.spacing(15)};
   }
 `;

@@ -28,5 +28,6 @@ export const ContainerHeader = styled(Container)`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: ${props => props.theme.spacing(2)};
+  flex-wrap: wrap;
+  gap: ${props => props.theme.spacing(8)};
 `;
