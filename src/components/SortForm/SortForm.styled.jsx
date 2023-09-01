@@ -63,6 +63,12 @@ export const SortLabel = styled.label`
     color: initial;
     border: none;
   }
+
+  input:checked + &:hover,
+  input:checked + &:focus {
+    color: red;
+  }
+
   &:not(:last-child) {
     margin-right: ${props => props.theme.spacing(2)};
   }
@@ -70,6 +76,7 @@ export const SortLabel = styled.label`
   &:hover,
   &:focus {
     transform: scale(1.1);
+    color: red;
   }
 `;
 

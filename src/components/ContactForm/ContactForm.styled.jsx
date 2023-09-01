@@ -58,5 +58,6 @@ export const ContactFormSubmit = styled.button`
   &:hover {
     transform: scale(1.1);
     box-shadow: ${props => props.theme.shadows.regular};
+    color: red;
   }
 `;

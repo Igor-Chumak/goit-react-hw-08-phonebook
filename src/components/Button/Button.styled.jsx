@@ -16,6 +16,7 @@ export const Button = styled.button`
   &:hover,
   &:focus {
     transform: scale(1.05);
+    color: red;
   }
 `;
 
