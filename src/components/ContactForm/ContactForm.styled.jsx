@@ -11,8 +11,10 @@ export const ContactFormForm = styled.form`
   label:last-of-type {
     margin-bottom: ${props => props.theme.spacing(5)};
   }
+  background-color: ${props => props.theme.bg_color.item};
   border-color: inherit;
   border: 1px solid;
+  border-radius: ${props => props.theme.spacing(2)};
 `;
 
 export const ContactFormLabel = styled.label`

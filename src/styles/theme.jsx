@@ -5,6 +5,7 @@ export const theme = Object.freeze({
     accent: '#2196F3',
     white: '#ffffff',
     gray: '#9e9e9e',
+    darkgrey: '#757575',
     light: '#f2f2f2',
     dark: '#212121',
     mainBackground: ['linear-gradient(to bottom, #c9d6ff,  #e2e2e2)'],
@@ -38,7 +39,7 @@ export const theme = Object.freeze({
   },
 
   bg_color: {
-    item: 'rgba(248, 248, 248, 0.5)',
+    item: 'rgba(248, 248, 248, 0.4)',
     btn: 'rgba(230, 230, 230, 0.3)',
     btn_active: 'rgb(233, 232, 232, 0.8)',
   },

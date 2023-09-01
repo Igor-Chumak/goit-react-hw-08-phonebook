@@ -8,11 +8,15 @@ export const SortWrapper = styled.div`
   /* margin-bottom: ${props => props.theme.spacing(3)}; */
   /* max-width: ${props => props.theme.spacing(80)}; */
   padding-bottom: ${props => props.theme.spacing(2)};
-  /* padding-left: ${props => props.theme.spacing(5)}; */
-  /* padding-right: ${props => props.theme.spacing(5)}; */
-  /* font-weight: 600; */
+  padding-left: ${props => props.theme.spacing(2)};
+  padding-right: ${props => props.theme.spacing(2)};
+  font-weight: 700;
   /* line-height: 1.5; */
   text-align: center;
+  background-color: ${props => props.theme.bg_color.item};
+  border-radius: ${props => props.theme.spacing(2)};
+  border-color: inherit;
+  border: 1px solid;
   /* outline: 1px solid red; */
 `;
 
@@ -26,7 +30,7 @@ export const SortLabelBox = styled.div`
   /* padding-bottom: ${props => props.theme.spacing(2)}; */
   /* padding-left: ${props => props.theme.spacing(5)}; */
   /* padding-right: ${props => props.theme.spacing(5)}; */
-  /* font-weight: 600; */
+  /* font-weight: 700; */
   /* line-height: 1.5; */
   /* outline: 1px solid yellow; */
 `;
@@ -42,18 +46,25 @@ export const SortLabel = styled.label`
   /* padding-bottom: ${props => props.theme.spacing(2)}; */
   /* padding-left: ${props => props.theme.spacing(5)}; */
   /* padding-right: ${props => props.theme.spacing(5)}; */
-  color: ${props => props.theme.colors.gray};
-  /* font-weight: 600; */
+  color: ${props => props.theme.colors.darkgrey};
+  font-weight: 700;
   font-size: ${props => props.theme.fontSizes.small};
   /* line-height: 1.5; */
   cursor: pointer;
   border-radius: 6px;
   box-shadow: ${props => props.theme.shadows.small};
+  border-radius: ${props => props.theme.spacing(2)};
+  border-color: inherit;
+  border: 1px solid ${props => props.theme.colors.darkgrey};
   /* outline: 1px solid green; */
 
   input:checked + & {
     background-color: ${props => props.theme.colors.white};
     color: initial;
+    border: none;
+  }
+  &:not(:last-child) {
+    margin-right: ${props => props.theme.spacing(2)};
   }
 
   &:hover,

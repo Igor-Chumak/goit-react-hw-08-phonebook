@@ -17,7 +17,10 @@ export const ContactListBox = styled.ul`
   justify-content: flex-start;
   align-items: flex-start;
   gap: ${props => props.theme.spacing(2)};
-
+  background-color: ${props => props.theme.bg_color.item};
+  border-radius: ${props => props.theme.spacing(2)};
+  border-color: inherit;
+  border: 1px solid;
   font-weight: 600;
   line-height: 1.2;
   /* outline: 1px solid; */

@@ -29,11 +29,15 @@ export const FilterLabel = styled.label`
   /* margin-bottom: ${props => props.theme.spacing(3)}; */
   max-width: ${props => props.theme.spacing(65)};
   width: 100%;
-  padding-bottom: ${props => props.theme.spacing(2)};
+  padding-bottom: ${props => props.theme.spacing(3)};
   padding-left: ${props => props.theme.spacing(5)};
   padding-right: ${props => props.theme.spacing(5)};
-  /* font-weight: 600; */
+  font-weight: 700;
   /* line-height: 1.5; */
+  background-color: ${props => props.theme.bg_color.item};
+  border-radius: ${props => props.theme.spacing(2)};
+  border-color: inherit;
+  border: 1px solid;
   /* outline: 1px solid blue; */
 `;
 

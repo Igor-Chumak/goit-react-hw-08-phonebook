@@ -21,6 +21,7 @@ export const Button = styled.button`
 
 export const Delete = styled(Button)`
   box-shadow: ${props => props.theme.shadows.small};
+  margin-left: auto;
 `;
 
 export const Clear = styled(Button)`
