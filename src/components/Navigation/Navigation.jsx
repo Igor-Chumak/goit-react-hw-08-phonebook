@@ -1,9 +1,8 @@
-import {} from 'react-redux';
-// import { ISLOGGEDIN } from 'store';
+import { useAuth } from 'hooks';
 import { NavLinkStyled } from './Navigation.styled';
 
 export const Navigation = () => {
-  const isLoggedIn = true; //ISLOGGEDIN;
+  const { isLoggedIn } = useAuth();
   console.log('Navigation isLoggedIn :>> ', isLoggedIn);
   return (
     <nav>

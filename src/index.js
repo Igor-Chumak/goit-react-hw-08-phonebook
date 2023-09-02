@@ -7,7 +7,6 @@ import { Provider as ReduxProvider } from 'react-redux';
 import { persistor, store } from 'store/store';
 import { PersistGate } from 'redux-persist/integration/react';
 import DarkThemeProvider from 'components/DarkThemeProvider/DarkThemeProvider';
-// import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

@@ -9,7 +9,6 @@ export const Container = styled.div`
 
   margin-left: auto;
   margin-right: auto;
-
   /* outline: 1px solid red; */
 `;
 
@@ -24,7 +23,6 @@ export const ContainerHomePage = styled(Container)`
 `;
 
 export const ContainerHeader = styled(Container)`
-  /* height: calc(100vh - 77px); */
   display: flex;
   flex-direction: row;
   justify-content: space-between;

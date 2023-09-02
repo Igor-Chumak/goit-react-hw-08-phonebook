@@ -15,22 +15,22 @@ import { sortbyReducer } from './contacts/sortbySlice';
 import { contactsReducer } from './contacts/contactsSlice';
 import { modeThemeReducer } from './theme/themeSlice';
 import { filterReducer } from './contacts/filterSlice';
-// import { authReducer } from './auth/slice';
+import { authReducer } from './auth/slice';
 
 const themePersistConfig = {
   key: LOCAL_STORAGE_KEY + '_theme',
   storage,
 };
 
-// const authPersistConfig = {
-//   key: 'auth',
-//   storage,
-//   whitelist: ['token'],
-// };
+const authPersistConfig = {
+  key: 'auth',
+  storage,
+  whitelist: ['token'],
+};
 
 export const store = configureStore({
   reducer: {
-    // auth: persistReducer(authPersistConfig, authReducer),
+    auth: persistReducer(authPersistConfig, authReducer),
     theme: persistReducer(themePersistConfig, modeThemeReducer),
     contacts: contactsReducer,
     filter: filterReducer,
