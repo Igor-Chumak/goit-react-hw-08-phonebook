@@ -45,7 +45,7 @@ export const RegisterForm = () => {
             minLength="2"
             maxLength="22"
             pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-            title="Thr name must consist only one word and may contain only letters, apostrophe, dash and no one space."
+            title="The name must consist only one word and may contain only letters, apostrophe, dash and no one space."
             placeholder="Name *"
             required
             value={name}
