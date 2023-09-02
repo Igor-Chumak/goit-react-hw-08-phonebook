@@ -4,7 +4,9 @@ import { auth } from 'store';
 import {
   ContactFormForm,
   ContactFormInput,
+  ContactFormInputNote,
   ContactFormLabel,
+  ContactFormNote,
   ContactFormSubmit,
 } from './RegisterForm.styled';
 
@@ -48,8 +50,8 @@ export const RegisterForm = () => {
             value={name}
             onChange={e => setName(e.target.value.trim())}
           />
+          <ContactFormInputNote>one word & no one space</ContactFormInputNote>
         </ContactFormLabel>
-        <p>(one word & no one space)</p>
         <ContactFormLabel>
           E-mail
           <ContactFormInput
@@ -70,6 +72,7 @@ export const RegisterForm = () => {
           Password
           <ContactFormInput
             type="password"
+            // type="text"
             name="password"
             minLength="7"
             maxLength="22"
@@ -79,9 +82,9 @@ export const RegisterForm = () => {
             value={password}
             onChange={e => setPassword(e.target.value)}
           />
+          <ContactFormInputNote>min 7 max 22 symbols</ContactFormInputNote>
+          <ContactFormNote>* is required</ContactFormNote>
         </ContactFormLabel>
-        <p>min7 max 22 symbols</p>
-        <p>* is required</p>
         <ContactFormSubmit type="submit">Sign Up</ContactFormSubmit>
       </ContactFormForm>
     </>

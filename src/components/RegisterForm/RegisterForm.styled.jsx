@@ -13,21 +13,17 @@ export const ContactFormForm = styled.form`
   align-items: center;
   flex-wrap: nowrap;
   overflow-y: auto;
-  gap: ${props => props.theme.spacing(4)};
+  gap: ${props => props.theme.spacing(2)};
   background-color: ${props => props.theme.bg_color.item};
   border-color: inherit;
   border: 1px solid;
   border-radius: ${props => props.theme.spacing(2)};
   box-shadow: ${props => props.theme.shadows.main};
-
-  // label:last-of-type {
-  //   margin-bottom: ${props => props.theme.spacing(5)};
-  // }
 `;
 
 export const ContactFormLabel = styled.label`
   display: block;
-  margin-bottom: ${props => props.theme.spacing(3)};
+  /* margin-bottom: ${props => props.theme.spacing(3)}; */
   font-weight: 600;
   line-height: 2;
 `;
@@ -52,6 +48,23 @@ export const ContactFormInput = styled.input`
   &:not(:placeholder-shown):valid {
     border-color: green;
   }
+`;
+
+export const ContactFormInputNote = styled.p`
+  margin: 0;
+  color: initial;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.2;
+  text-align: center;
+`;
+
+export const ContactFormNote = styled(ContactFormInputNote)`
+  padding-top: ${props => props.theme.spacing(2)};
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: left;
 `;
 
 export const ContactFormSubmit = styled.button`
