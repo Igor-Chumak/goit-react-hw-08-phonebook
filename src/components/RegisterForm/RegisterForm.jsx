@@ -8,6 +8,7 @@ import {
   ContactFormLabel,
   ContactFormNote,
   ContactFormSubmit,
+  Wrapper,
 } from './RegisterForm.styled';
 
 export const RegisterForm = () => {
@@ -34,7 +35,7 @@ export const RegisterForm = () => {
   };
 
   return (
-    <>
+    <Wrapper>
       <ContactFormForm onSubmit={handleSubmit}>
         <ContactFormLabel>
           Name
@@ -87,7 +88,7 @@ export const RegisterForm = () => {
         </ContactFormLabel>
         <ContactFormSubmit type="submit">Sign Up</ContactFormSubmit>
       </ContactFormForm>
-    </>
+    </Wrapper>
   );
 };
 

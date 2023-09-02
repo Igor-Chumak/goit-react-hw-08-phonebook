@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+export const Wrapper = styled.div`
+  overflow-y: auto;
+  max-height: 100%;
+`;
+
 export const ContactFormForm = styled.form`
   max-width: ${props => props.theme.spacing(140)};
   margin: 0 auto;
@@ -12,7 +17,7 @@ export const ContactFormForm = styled.form`
   justify-content: space-around;
   align-items: center;
   flex-wrap: nowrap;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   gap: ${props => props.theme.spacing(2)};
   background-color: ${props => props.theme.bg_color.item};
   border-color: inherit;
