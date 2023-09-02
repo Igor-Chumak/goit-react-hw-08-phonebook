@@ -21,8 +21,9 @@ export const Button = styled.button`
 `;
 
 export const Delete = styled(Button)`
-  box-shadow: ${props => props.theme.shadows.small};
   margin-left: auto;
+  color: initial;
+  box-shadow: ${props => props.theme.shadows.small};
 `;
 
 export const Clear = styled(Button)`
@@ -34,6 +35,7 @@ export const Clear = styled(Button)`
   padding-top: ${props => props.theme.spacing(1)};
   border: 1px solid ${props => props.theme.colors.dark};
   border-radius: 6px;
+  color: initial;
 `;
 
 export const OkButton = styled(Button)`
@@ -45,4 +47,5 @@ export const OkButton = styled(Button)`
   font-size: ${props => props.theme.fontSizes.small};
   line-height: 1.2;
   transform: scale(1.1);
+  color: initial;
 `;
