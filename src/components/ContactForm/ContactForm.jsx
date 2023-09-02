@@ -20,7 +20,7 @@ export const ContactForm = () => {
 
   const searchContact = name => {
     return contacts.find(
-      contact => contact.name.toLowerCase() === name.toLowerCase()
+      contact => contact.name.trim().toLowerCase() === name.toLowerCase()
     );
   };
 
@@ -53,7 +53,7 @@ export const ContactForm = () => {
             placeholder=""
             required
             value={name}
-            onChange={e => setName(e.target.value.trim())}
+            onChange={e => setName(e.target.value)}
           />
         </ContactFormLabel>
         <ContactFormLabel>
