@@ -2,12 +2,12 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { auth } from 'store';
 import {
-  ContactFormForm,
-  ContactFormInput,
-  ContactFormInputNote,
-  ContactFormLabel,
-  ContactFormNote,
-  ContactFormSubmit,
+  RegisterFormWrap,
+  RegisterFormInput,
+  RegisterFormInputNote,
+  RegisterFormLabel,
+  RegisterFormNote,
+  RegisterFormSubmit,
   Wrapper,
 } from './RegisterForm.styled';
 
@@ -36,10 +36,10 @@ export const RegisterForm = () => {
 
   return (
     <Wrapper>
-      <ContactFormForm onSubmit={handleSubmit}>
-        <ContactFormLabel>
+      <RegisterFormWrap onSubmit={handleSubmit}>
+        <RegisterFormLabel>
           Name
-          <ContactFormInput
+          <RegisterFormInput
             type="text"
             name="name"
             minLength="2"
@@ -51,11 +51,11 @@ export const RegisterForm = () => {
             value={name}
             onChange={e => setName(e.target.value.trim())}
           />
-          <ContactFormInputNote>one word & no one space</ContactFormInputNote>
-        </ContactFormLabel>
-        <ContactFormLabel>
+          <RegisterFormInputNote>one word & no one space</RegisterFormInputNote>
+        </RegisterFormLabel>
+        <RegisterFormLabel>
           E-mail
-          <ContactFormInput
+          <RegisterFormInput
             type="email"
             name="email"
             minLength="7"
@@ -68,10 +68,10 @@ export const RegisterForm = () => {
             value={email}
             onChange={e => setEmail(e.target.value.trim())}
           />
-        </ContactFormLabel>
-        <ContactFormLabel>
+        </RegisterFormLabel>
+        <RegisterFormLabel>
           Password
-          <ContactFormInput
+          <RegisterFormInput
             type="password"
             // type="text"
             name="password"
@@ -83,11 +83,11 @@ export const RegisterForm = () => {
             value={password}
             onChange={e => setPassword(e.target.value)}
           />
-          <ContactFormInputNote>min 7 max 22 symbols</ContactFormInputNote>
-          <ContactFormNote>* is required</ContactFormNote>
-        </ContactFormLabel>
-        <ContactFormSubmit type="submit">Sign Up</ContactFormSubmit>
-      </ContactFormForm>
+          <RegisterFormInputNote>min 7 max 22 symbols</RegisterFormInputNote>
+          <RegisterFormNote>* is required</RegisterFormNote>
+        </RegisterFormLabel>
+        <RegisterFormSubmit type="submit">Sign Up</RegisterFormSubmit>
+      </RegisterFormWrap>
     </Wrapper>
   );
 };

@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  overflow-y: auto;
   max-height: 100%;
+  overflow-y: auto;
 `;
 
-export const ContactFormForm = styled.form`
+export const RegisterFormWrap = styled.form`
   max-width: ${props => props.theme.spacing(140)};
   margin: 0 auto;
   padding-top: ${props => props.theme.spacing(2)};
@@ -17,7 +17,6 @@ export const ContactFormForm = styled.form`
   justify-content: space-around;
   align-items: center;
   flex-wrap: nowrap;
-  /* overflow-y: auto; */
   gap: ${props => props.theme.spacing(2)};
   background-color: ${props => props.theme.bg_color.item};
   border-color: inherit;
@@ -26,14 +25,13 @@ export const ContactFormForm = styled.form`
   box-shadow: ${props => props.theme.shadows.main};
 `;
 
-export const ContactFormLabel = styled.label`
+export const RegisterFormLabel = styled.label`
   display: block;
-  /* margin-bottom: ${props => props.theme.spacing(3)}; */
   font-weight: 600;
   line-height: 2;
 `;
 
-export const ContactFormInput = styled.input`
+export const RegisterFormInput = styled.input`
   display: block;
   padding: ${props => props.theme.spacing(2)};
   font-weight: 600;
@@ -55,7 +53,7 @@ export const ContactFormInput = styled.input`
   }
 `;
 
-export const ContactFormInputNote = styled.p`
+export const RegisterFormInputNote = styled.p`
   margin: 0;
   color: initial;
   font-weight: 600;
@@ -64,7 +62,7 @@ export const ContactFormInputNote = styled.p`
   text-align: center;
 `;
 
-export const ContactFormNote = styled(ContactFormInputNote)`
+export const RegisterFormNote = styled(RegisterFormInputNote)`
   padding-top: ${props => props.theme.spacing(2)};
   font-weight: 600;
   font-size: 14px;
@@ -72,7 +70,7 @@ export const ContactFormNote = styled(ContactFormInputNote)`
   text-align: left;
 `;
 
-export const ContactFormSubmit = styled.button`
+export const RegisterFormSubmit = styled.button`
   margin-top: ${props => props.theme.spacing(4)};
   display: block;
   min-width: ${props => props.theme.spacing(5)};

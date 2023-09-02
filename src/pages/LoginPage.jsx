@@ -1,5 +1,11 @@
+import { ContainerPage, LogInForm } from 'components';
+
 const LoginPage = () => {
-  return <div>LoginPage</div>;
+  return (
+    <ContainerPage>
+      <LogInForm />
+    </ContainerPage>
+  );
 };
 
 export default LoginPage;

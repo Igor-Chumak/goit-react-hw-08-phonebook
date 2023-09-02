@@ -23,7 +23,7 @@ const themePersistConfig = {
 };
 
 const authPersistConfig = {
-  key: 'auth',
+  key: LOCAL_STORAGE_KEY + '_auth',
   storage,
   whitelist: ['token'],
 };
