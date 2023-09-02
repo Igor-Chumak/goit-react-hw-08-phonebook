@@ -17,6 +17,7 @@ export const SortWrapper = styled.div`
   border-radius: ${props => props.theme.spacing(2)};
   border-color: inherit;
   border: 1px solid;
+  /* box-shadow: ${props => props.theme.shadows.main}; */
   /* outline: 1px solid red; */
 `;
 
