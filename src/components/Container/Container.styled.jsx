@@ -20,6 +20,7 @@ export const ContainerHomePage = styled(Container)`
   justify-content: center;
   align-items: center;
   gap: ${props => props.theme.spacing(4)};
+  color: ${props => props.theme.colors.title};
 `;
 
 export const ContainerHeader = styled(Container)`
