@@ -5,7 +5,7 @@ export const UserMenu = () => {
     <Wrapper>
       <UserName>Welcome, Igor</UserName>
       <ButtonLogOut type="button" onClick={() => console.log('LogOut ...')}>
-        Logout
+        Log Out
       </ButtonLogOut>
     </Wrapper>
   );

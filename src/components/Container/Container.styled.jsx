@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  position: relative;
+  /* position: relative; */
   max-width: 1200px;
 
   padding-left: ${props => props.theme.spacing(5)};
@@ -12,7 +12,7 @@ export const Container = styled.div`
   /* outline: 1px solid red; */
 `;
 
-export const ContainerHomePage = styled(Container)`
+export const ContainerPage = styled(Container)`
   height: calc(100vh - 77px);
   display: flex;
   flex-direction: column;
@@ -23,6 +23,7 @@ export const ContainerHomePage = styled(Container)`
 `;
 
 export const ContainerHeader = styled(Container)`
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

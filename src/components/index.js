@@ -16,5 +16,5 @@ export * from 'components/Navigation/Navigation';
 export * from 'components/UserMenu/UserMenu';
 export * from 'components/AuthNav/AuthNav';
 export * from 'components/Guards/PrivateRoute';
-export * from 'components/Guards/RestrictedRoute';
 export * from 'components/RegisterForm/RegisterForm';
+export * from 'components/Guards/RestrictedRoute';

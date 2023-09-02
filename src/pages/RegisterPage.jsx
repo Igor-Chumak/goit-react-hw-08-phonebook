@@ -1,11 +1,10 @@
-import { RegisterForm } from 'components';
+import { ContainerPage, RegisterForm } from 'components';
 
 const RegisterPage = () => {
   return (
-    <div>
-      RegisterPage
+    <ContainerPage>
       <RegisterForm />
-    </div>
+    </ContainerPage>
   );
 };
 

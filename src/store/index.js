@@ -10,4 +10,4 @@ export * from 'store/theme/themeSlice';
 export * from 'store/theme/selectorsTheme';
 export * from 'store/auth/slice';
 export * from 'store/auth/selectors';
-export * from 'store/auth/operations';
+export * as auth from 'store/auth/operations';
