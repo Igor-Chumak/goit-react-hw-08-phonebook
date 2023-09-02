@@ -8,6 +8,7 @@ export const SectionBox = styled.section`
 export const Title = styled.h2`
   margin-bottom: ${props => props.theme.spacing(3)};
   /* background-color: ${props => props.theme.bg_color.item}; */
+  color: #3f0101;
   font-weight: 800;
   font-size: 28px;
   text-align: center;
