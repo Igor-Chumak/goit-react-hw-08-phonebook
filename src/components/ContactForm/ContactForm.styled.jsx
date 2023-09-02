@@ -37,6 +37,7 @@ export const ContactFormInput = styled.input`
   font-size: ${props => props.theme.fontSizes.small};
   border: 2px solid;
   color: ${props => props.theme.colors.gray};
+  border-radius: ${props => props.theme.spacing(2)};
 
   &:focus {
     color: initial;

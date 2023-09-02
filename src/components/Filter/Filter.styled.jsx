@@ -48,7 +48,11 @@ export const FilterInput = styled.input`
   font-weight: 600;
   font-size: ${props => props.theme.fontSizes.small};
   color: ${props => props.theme.colors.gray};
-  outline: 1px solid blue;
+  border: 2px solid;
+  color: ${props => props.theme.colors.gray};
+  border-radius: ${props => props.theme.spacing(2)};
+
+  /* outline: 1px solid blue; */
   &:focus {
     color: initial;
   }
