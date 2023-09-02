@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[983],{3983:function(e,t,o){o.r(t);var n=o(8121),r=o(3329);t.default=function(){return(0,r.jsxs)(n.Zv,{children:[(0,r.jsx)("h1",{style:{fontSize:"40px",textAlign:"center"},children:'Welcome to homepage "Phonebook"'}),(0,r.jsx)("h2",{children:"\xa9 Igor Chumak & GoIT"})]})}}}]);
-//# sourceMappingURL=983.b4d18d42.chunk.js.map
