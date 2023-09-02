@@ -24,6 +24,10 @@ export const Delete = styled(Button)`
   margin-left: auto;
   color: initial;
   box-shadow: ${props => props.theme.shadows.small};
+  &:hover,
+  &:focus {
+    border: 1px solid;
+  }
 `;
 
 export const Clear = styled(Button)`
