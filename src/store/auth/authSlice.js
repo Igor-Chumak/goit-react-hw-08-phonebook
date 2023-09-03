@@ -37,9 +37,7 @@ const authSlice = createSlice({
       state.isRefreshing = false;
     },
     [refreshUser.rejected](state, action) {
-      console.log('auth error: ', action);
       state.isRefreshing = false;
-      // state.error = action.payload;
     },
   },
 });
