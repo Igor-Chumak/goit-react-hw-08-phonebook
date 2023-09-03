@@ -40,7 +40,7 @@ export const LogInForm = () => {
             type="email"
             name="email"
             minLength="7"
-            maxLength="22"
+            // maxLength="22"
             autoComplete="username"
             pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
             title="Invalid email address"
