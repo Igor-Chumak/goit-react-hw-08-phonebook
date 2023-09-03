@@ -3,7 +3,7 @@ import { NavLinkStyled } from './Navigation.styled';
 
 export const Navigation = () => {
   const { isLoggedIn } = useAuth();
-  console.log('Navigation isLoggedIn :>> ', isLoggedIn);
+
   return (
     <nav>
       <NavLinkStyled to="/" end>

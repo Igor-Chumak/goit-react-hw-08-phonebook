@@ -5,7 +5,6 @@ import { Loader, Navigation, UserMenu, AuthNav, Header } from 'components';
 
 export const SharedLayout = () => {
   const { isLoggedIn } = useAuth();
-  console.log('SharedLayout isLoggedIn :>> ', isLoggedIn);
 
   return (
     <div>
