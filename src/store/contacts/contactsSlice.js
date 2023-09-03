@@ -11,12 +11,15 @@ import {
   handleGetContacts,
   handlePending,
   handleRejected,
-} from './handlers';
+} from './contactsHandlers';
 
 const initialState = {
   items: [],
   isLoading: false,
-  error: '',
+  error: {
+    message: '',
+    status: '',
+  },
 };
 
 const contactsSlice = createSlice({
@@ -33,6 +36,9 @@ const contactsSlice = createSlice({
         action => action.type.endsWith('/fulfilled'),
         handleFulfilled
       );
+    // .addDefaultCase(action => {
+    //   console.log('default: ', action);
+    // });
   },
 });
 

@@ -15,7 +15,7 @@ import { sortbyReducer } from './contacts/sortbySlice';
 import { contactsReducer } from './contacts/contactsSlice';
 import { modeThemeReducer } from './theme/themeSlice';
 import { filterReducer } from './contacts/filterSlice';
-import { authReducer } from './auth/slice';
+import { authReducer } from './auth/authSlice';
 
 const themePersistConfig = {
   key: LOCAL_STORAGE_KEY + '_theme',

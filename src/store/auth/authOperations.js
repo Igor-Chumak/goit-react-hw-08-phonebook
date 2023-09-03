@@ -20,14 +20,17 @@ const clearAuthHeader = () => {
 export const register = createAsyncThunk(
   'auth/register',
   async (credentials, thunkAPI) => {
-    console.log('registered :>> ', credentials);
     try {
       const res = await axios.post('/users/signup', credentials);
       // After successful registration, add the token to the HTTP header
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
+      console.log('register error:>> ', error);
+      return thunkAPI.rejectWithValue({
+        message: `${error.message} <- ${error.code}`,
+        status: `${error.request.status}`,
+      });
     }
   }
 );
@@ -45,7 +48,11 @@ export const logIn = createAsyncThunk(
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
+      console.log('logIn :>> ', typeof error.request.status);
+      return thunkAPI.rejectWithValue({
+        message: `${error.message} <- ${error.code}`,
+        status: `${error.request.status}`,
+      });
     }
   }
 );
@@ -60,7 +67,11 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
     // After a successful logout, remove the token from the HTTP header
     clearAuthHeader();
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.message);
+    console.log('logOut :>> ', error);
+    return thunkAPI.rejectWithValue({
+      message: `${error.message} <- ${error.code}`,
+      status: `${error.request.status}`,
+    });
   }
 });
 
@@ -73,11 +84,15 @@ export const refreshUser = createAsyncThunk(
   async (_, thunkAPI) => {
     // Reading the token from the state via getState()
     const state = thunkAPI.getState();
+    console.log('state :>> ', state);
     const persistedToken = state.auth.token;
 
     if (persistedToken === null) {
       // If there is no token, exit without performing any request
-      return thunkAPI.rejectWithValue('Unable to fetch user');
+      return thunkAPI.rejectWithValue({
+        message: 'Unable to fetch user',
+        status: '101',
+      });
     }
 
     try {
@@ -86,7 +101,11 @@ export const refreshUser = createAsyncThunk(
       const res = await axios.get('/users/current');
       return res.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
+      console.log('refreshUser :>> ', error);
+      return thunkAPI.rejectWithValue({
+        message: `${error.message} <- ${error.code}`,
+        status: `${error.request.status}`,
+      });
     }
   }
 );

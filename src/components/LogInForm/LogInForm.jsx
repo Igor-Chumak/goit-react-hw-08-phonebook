@@ -67,7 +67,7 @@ export const LogInForm = () => {
           <LogInFormInputNote>min 7 max 22 symbols</LogInFormInputNote>
           <LogInFormNote>* is required</LogInFormNote>
         </LogInFormLabel>
-        <LogInFormSubmit type="submit">Sign Up</LogInFormSubmit>
+        <LogInFormSubmit type="submit">Log In</LogInFormSubmit>
       </LogInFormWrap>
     </Wrapper>
   );

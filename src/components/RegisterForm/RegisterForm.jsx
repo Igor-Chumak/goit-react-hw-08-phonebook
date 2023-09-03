@@ -58,7 +58,7 @@ export const RegisterForm = () => {
           <RegisterFormInput
             type="email"
             name="email"
-            minLength="7"
+            minLength="14"
             // maxLength="22"
             autoComplete="username"
             pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
@@ -68,6 +68,7 @@ export const RegisterForm = () => {
             value={email}
             onChange={e => setEmail(e.target.value.trim())}
           />
+          <RegisterFormInputNote>min 14 symbols</RegisterFormInputNote>
         </RegisterFormLabel>
         <RegisterFormLabel>
           Password
@@ -91,110 +92,3 @@ export const RegisterForm = () => {
     </Wrapper>
   );
 };
-
-//   return (
-// <form className="modal-form">
-//     <label className="modal-field">
-//       <span className="modal-field-input">
-//         <input
-//           className="modal-input"
-//           type="text"
-//           name="name"
-//           minlength="2"
-//           maxlength="20"
-//           placeholder="name"
-//           autoFocus
-//         />
-//         <svg
-//           className="modal-icon"
-//           width="28"
-//           height="28"
-//           style="stroke-width: 2px"
-//         >
-//           <use href="./img/icons.svg#icon-user"></use>
-//         </svg>
-//       </span>
-//     </label>
-//     <label className="modal-field">
-//       <span className="modal-field-input">
-//         <input
-//           className="modal-input"
-//           type="email"
-//           name="email"
-//           required
-//           minlength="6"
-//           maxlength="20"
-//           autoComplete="username"
-//           placeholder="email*"
-//           pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
-//           title="Invalid email address"
-//         />
-
-//         <svg className="modal-icon">
-//           <use href="./img/icons.svg#icon-mail"></use>
-//         </svg>
-//       </span>
-//     </label>
-//     <label className="visually-hidden">password</label>
-//     <div className="modal-field-input modal-field">
-//       <input
-//         className="modal-input"
-//         type="password"
-//         name="password"
-//         required
-//         minlength="6"
-//         maxlength="20"
-//         autocomplete="current-password"
-//         placeholder="password*"
-//         title="Require min 6 sign, which include at least 1 uppercase character, 1 lowercase character, and 1 number."
-//       />
-//       <!-- Eye -->
-//       <button
-//         className="toggle-password"
-//         id="toggle-password"
-//         type="button"
-//         aria-label="Show password as plain text. Warning: this will display your password on the screen."
-//       >
-//         <svg className="modal-password-eye" width="20" height="20">
-//           <use href="./img/icons-auth.svg#icon-eye-off"></use>
-//         </svg>
-//         <svg className="modal-password-eye off" width="20" height="20">
-//           <use href="./img/icons-auth.svg#icon-eye"></use>
-//         </svg>
-//       </button>
-//       <!-- Eye -->
-//       <svg className="modal-icon modal-icon-lock">
-//         <use href="./img/icons.svg#icon-lock"></use>
-//       </svg>
-//     </div>
-//     <button className="btn-modal-submit" type="submit">sign up</button>
-//     <div className="box-btn-modal-action">
-//       <button className="btn-modal-action" type="button" data-action="signup">
-//         sign up
-//       </button>
-//       <button className="btn-modal-action" type="button" data-action="signin">
-//         sign in
-//       </button>
-//     </div>
-//   </form>
-//   );
-// };
-
-//   return (
-//     <form onSubmit={handleSubmit} autoComplete="off">
-//       <label>
-//         Username
-//         <input type="text" name="name" />
-//       </label>
-//       <label>
-//         Email
-//         <input type="email" name="email" />
-//       </label>
-//       <label>
-//         Password
-//         <input type="password" name="password" />
-//       </label>
-//       <button type="submit">Register</button>
-//     </form>
-//   );
-// };

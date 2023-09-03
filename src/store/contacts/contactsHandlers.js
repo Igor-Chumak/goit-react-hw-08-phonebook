@@ -16,10 +16,12 @@ export const handleDeleteContact = (state, action) => {
 
 export const handlePending = state => {
   state.isLoading = true;
-  state.error = '';
+  state.error.message = '';
+  state.error.status = '';
 };
 
 export const handleRejected = (state, action) => {
+  console.log('Contacts handler rejected :>> ', action);
   state.isLoading = false;
   state.error = action.payload;
 };
