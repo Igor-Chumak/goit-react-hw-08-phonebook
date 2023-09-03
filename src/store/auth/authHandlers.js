@@ -1,29 +1,31 @@
-export const handleGetContacts = (state, action) => {
-  state.isLoading = false;
-  state.items = action.payload;
+export const handleRegister = (state, action) => {
+  state.user = action.payload.user;
+  state.token = action.payload.token;
+  state.isLoggedIn = true;
 };
 
-export const handleAddContact = (state, action) => {
-  state.isLoading = false;
-  state.items.unshift(action.payload);
+export const handleLogIn = (state, action) => {
+  state.user = action.payload.user;
+  state.token = action.payload.token;
+  state.isLoggedIn = true;
 };
 
-export const handleDeleteContact = (state, action) => {
-  state.isLoading = false;
-  const index = state.items.findIndex(item => item.id === action.payload.id);
-  state.items.splice(index, 1);
+export const handleLogOut = state => {
+  state.user = { name: null, email: null };
+  state.token = null;
+  state.isLoggedIn = false;
 };
 
-export const handlePending = state => {
-  state.isLoading = true;
-  state.error = '';
+export const handleRefreshPending = state => {
+  state.isRefreshing = true;
 };
 
-export const handleRejected = (state, action) => {
-  state.isLoading = false;
-  state.error = action.payload;
+export const handleRefresh = (state, action) => {
+  state.user = action.payload;
+  state.isLoggedIn = true;
+  state.isRefreshing = false;
 };
 
-export const handleFulfilled = state => {
-  state.isLoading = false;
+export const handleRefreshRejected = state => {
+  state.isRefreshing = false;
 };
