@@ -36,9 +36,6 @@ const contactsSlice = createSlice({
         action => action.type.endsWith('/fulfilled'),
         handleFulfilled
       );
-    // .addDefaultCase(action => {
-    //   console.log('default: ', action);
-    // });
   },
 });
 
