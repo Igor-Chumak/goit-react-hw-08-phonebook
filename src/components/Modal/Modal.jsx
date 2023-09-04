@@ -13,7 +13,6 @@ import { useDispatch } from 'react-redux';
 import { api } from 'store';
 
 export const Modal = ({ contactEdit, handleCloseModal }) => {
-  console.log('handleCloseEditModal :>> ', handleCloseModal);
   const dispatch = useDispatch();
 
   const { name, number, id } = contactEdit;
