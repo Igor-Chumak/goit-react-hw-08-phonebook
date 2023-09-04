@@ -13,10 +13,9 @@ import { useDispatch } from 'react-redux';
 import { api } from 'store';
 
 export const Modal = ({ contact, handleCloseEditModal }) => {
-  const { name, number, id } = contact;
-
   const dispatch = useDispatch();
 
+  const { name, number, id } = contact;
   const [nameEdit, setNameEdit] = useState(name);
   const [numberEdit, setNumberEdit] = useState(number);
 
