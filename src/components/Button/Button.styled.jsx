@@ -20,8 +20,8 @@ export const Button = styled.button`
   }
 `;
 
-export const Delete = styled(Button)`
-  margin-left: auto;
+export const BtnItem = styled(Button)`
+  /* margin-left: auto; */
   color: initial;
   box-shadow: ${props => props.theme.shadows.small};
   &:hover,

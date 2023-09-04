@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { api, selectIsLoading } from 'store';
-import { Delete } from 'components';
-import { ContactItem } from './ContactItems.styled';
+import { BtnItem } from 'components';
+import { BtnWrap, ContactItem } from './ContactItems.styled';
 
 export const ContactItems = ({ name, number, id }) => {
   const isLoading = useSelector(selectIsLoading);
@@ -11,14 +11,24 @@ export const ContactItems = ({ name, number, id }) => {
   return (
     <ContactItem>
       {name} : {number}
-      <Delete
-        type="button"
-        id={id}
-        onClick={() => handleDelete(id)}
-        disabled={isLoading}
-      >
-        Delete
-      </Delete>
+      <BtnWrap>
+        <BtnItem
+          type="button"
+          id={id}
+          onClick={() => handleDelete(id)}
+          disabled={isLoading}
+        >
+          Edit
+        </BtnItem>
+        <BtnItem
+          type="button"
+          id={id}
+          onClick={() => handleDelete(id)}
+          disabled={isLoading}
+        >
+          Delete
+        </BtnItem>
+      </BtnWrap>
     </ContactItem>
   );
 };
