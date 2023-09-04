@@ -10,6 +10,12 @@ export const handleAddContact = (state, action) => {
   state.items.unshift(action.payload);
 };
 
+export const handleUpdateContact = (state, action) => {
+  // state.isLoading = false;
+  const index = state.items.findIndex(item => item.id === action.payload.id);
+  state.items[index] = action.payload;
+};
+
 export const handleDeleteContact = (state, action) => {
   // state.isLoading = false;
   const index = state.items.findIndex(item => item.id === action.payload.id);

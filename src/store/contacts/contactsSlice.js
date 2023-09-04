@@ -3,6 +3,7 @@ import {
   getContactsThunk,
   addContactThunk,
   deleteContactThunk,
+  updateContactThunk,
 } from 'store/contacts/operationsAPI';
 import {
   handleAddContact,
@@ -11,6 +12,7 @@ import {
   handleGetContacts,
   handlePending,
   handleRejected,
+  handleUpdateContact,
 } from './contactsHandlers';
 
 const initialState = {
@@ -30,6 +32,7 @@ const contactsSlice = createSlice({
       .addCase(getContactsThunk.fulfilled, handleGetContacts)
       .addCase(addContactThunk.fulfilled, handleAddContact)
       .addCase(deleteContactThunk.fulfilled, handleDeleteContact)
+      .addCase(updateContactThunk.fulfilled, handleUpdateContact)
       .addMatcher(isPendingAction, handlePending)
       .addMatcher(isRejectedAction, handleRejected)
       .addMatcher(

@@ -33,7 +33,15 @@ export const ContactForm = () => {
         `${searchResult.name} : ${searchResult.number} is already in contacts`
       );
     dispatch(api.addContactThunk({ name, number }));
-    e.currentTarget.reset();
+    setName('');
+    setNumber('');
+  };
+
+  const updateNotification = () => {
+    const updateContact = { ...searchContact(name), ...{ name, number } };
+    console.log('update.id :>> ', updateContact);
+    dispatch(api.updateContactThunk(updateContact));
+    setNotification('');
     setName('');
     setNumber('');
   };
@@ -77,6 +85,7 @@ export const ContactForm = () => {
       </ContactFormForm>
       {notification && (
         <Notification
+          updateNotification={updateNotification}
           setNotification={setNotification}
           message={notification}
         />
