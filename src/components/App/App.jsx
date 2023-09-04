@@ -18,14 +18,14 @@ const LoginPage = lazy(() => import('pages/LoginPage'));
 const ContactsPage = lazy(() => import('pages/ContactsPage'));
 Notify.init({
   width: '500px',
-  fontSize: '25px',
+  fontSize: '20px',
   position: 'center-top',
   timeout: '2000',
   messageMaxLength: 150,
   distance: '20px',
   showOnlyTheLastOne: true,
   clickToClose: true,
-  closeButton: true,
+  // closeButton: true,
   opacity: 1,
   warning: {
     background: '#df120b',
