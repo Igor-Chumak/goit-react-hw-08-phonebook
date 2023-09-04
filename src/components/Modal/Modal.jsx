@@ -37,7 +37,8 @@ export const Modal = ({ contactEdit, handleCloseModal }) => {
     };
   }, [handleCloseModal]);
 
-  const handleSubmit = () => {
+  const handleSubmit = e => {
+    e.preventDefault();
     const updateContact = { name: nameEdit, number: numberEdit, id };
     dispatch(api.updateContactThunk(updateContact));
     handleCloseModal('');
