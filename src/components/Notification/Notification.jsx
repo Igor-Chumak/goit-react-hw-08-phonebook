@@ -11,11 +11,11 @@ export const Notification = ({
     <NotificationBox>
       <Message>{message}</Message>
       <BtnWrap>
+        <OkButton type="button" onClick={() => setNotification('')}>
+          Cancel
+        </OkButton>
         <OkButton type="button" onClick={() => updateNotification()}>
           UpDate
-        </OkButton>
-        <OkButton type="button" onClick={() => setNotification('')}>
-          OK
         </OkButton>
       </BtnWrap>
     </NotificationBox>
