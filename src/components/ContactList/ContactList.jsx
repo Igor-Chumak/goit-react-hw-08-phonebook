@@ -19,7 +19,7 @@ export const ContactList = () => {
         </ContactListNoItems>
       )}
       {contactsToList.map(contact => (
-        <ContactItems {...contact} key={contact.id} />
+        <ContactItems contact={contact} key={contact.id} />
       ))}
     </ContactListBox>
   );

@@ -1,35 +1,57 @@
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { api, selectIsLoading } from 'store';
 import { BtnItem } from 'components';
 import { BtnWrap, ContactItem } from './ContactItems.styled';
+import { Modal } from 'components/Modal/Modal';
 
-export const ContactItems = ({ name, number, id }) => {
-  const isLoading = useSelector(selectIsLoading);
+export const ContactItems = ({ contact }) => {
+  const { name, number, id } = contact;
+  const [openEditModal, setOpenEditModal] = useState(false);
   const dispatch = useDispatch();
+
+  const isLoading = useSelector(selectIsLoading);
+
   const handleDelete = itemId => dispatch(api.deleteContactThunk(itemId));
+
+  const handleCloseEditModal = e => {
+    console.log('Close Modal');
+    setOpenEditModal(e);
+  };
+
+  // const handleEditContact = contact => {
+  //   console.log('Close Modal contact :>> ', contact);
+  //   setOpenEditModal('');
+  // };
+
   return (
-    <ContactItem>
-      {name} : {number}
-      <BtnWrap>
-        <BtnItem
-          type="button"
-          id={id}
-          onClick={() => handleDelete(id)}
-          disabled={isLoading}
-        >
-          Edit
-        </BtnItem>
-        <BtnItem
-          type="button"
-          id={id}
-          onClick={() => handleDelete(id)}
-          disabled={isLoading}
-        >
-          Delete
-        </BtnItem>
-      </BtnWrap>
-    </ContactItem>
+    <>
+      <ContactItem>
+        {name} : {number}
+        <BtnWrap>
+          <BtnItem
+            type="button"
+            id={id}
+            onClick={() => setOpenEditModal(contact)}
+            disabled={isLoading}
+          >
+            Edit
+          </BtnItem>
+          <BtnItem
+            type="button"
+            id={id}
+            onClick={() => handleDelete(id)}
+            disabled={isLoading}
+          >
+            Delete
+          </BtnItem>
+        </BtnWrap>
+      </ContactItem>
+      {openEditModal && (
+        <Modal contact={contact} handleCloseEditModal={handleCloseEditModal} />
+      )}
+    </>
   );
 };
 

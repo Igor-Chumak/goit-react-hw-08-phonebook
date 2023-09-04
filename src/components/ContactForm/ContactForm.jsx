@@ -39,7 +39,6 @@ export const ContactForm = () => {
 
   const updateNotification = () => {
     const updateContact = { ...searchContact(name), ...{ name, number } };
-    console.log('update.id :>> ', updateContact);
     dispatch(api.updateContactThunk(updateContact));
     setNotification('');
     setName('');
