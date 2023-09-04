@@ -31,5 +31,5 @@ export const ContactItem = styled.li`
 export const BtnWrap = styled.div`
   margin-left: auto;
   display: flex;
-  gap: ${props => props.theme.spacing(1)};
+  gap: ${props => props.theme.spacing(4)};
 `;

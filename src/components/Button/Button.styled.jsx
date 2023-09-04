@@ -21,7 +21,7 @@ export const Button = styled.button`
 `;
 
 export const BtnItem = styled(Button)`
-  /* margin-left: auto; */
+  margin-left: 0;
   color: initial;
   box-shadow: ${props => props.theme.shadows.small};
   &:hover,
