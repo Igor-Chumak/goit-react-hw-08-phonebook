@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const NotificationBox = styled.div`
-  padding: ${props => props.theme.spacing(2)};
+  padding: ${props => props.theme.spacing(1)};
   display: flex;
   align-items: space-around;
   gap: ${props => props.theme.spacing(4)};
