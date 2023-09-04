@@ -16,7 +16,6 @@ export const ContactItems = ({ contact }) => {
   const handleDelete = itemId => dispatch(api.deleteContactThunk(itemId));
 
   const handleCloseEditModal = e => {
-    console.log('Close Modal');
     setOpenEditModal(e);
   };
 
@@ -44,7 +43,7 @@ export const ContactItems = ({ contact }) => {
         </BtnWrap>
       </ContactItem>
       {openEditModal && (
-        <Modal contact={contact} handleCloseEditModal={handleCloseEditModal} />
+        <Modal contactEdit={contact} handleCloseModal={handleCloseEditModal} />
       )}
     </>
   );

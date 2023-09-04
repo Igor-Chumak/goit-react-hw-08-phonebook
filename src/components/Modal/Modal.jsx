@@ -12,35 +12,36 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { api } from 'store';
 
-export const Modal = ({ contact, handleCloseEditModal }) => {
+export const Modal = ({ contactEdit, handleCloseModal }) => {
+  console.log('handleCloseEditModal :>> ', handleCloseModal);
   const dispatch = useDispatch();
 
-  const { name, number, id } = contact;
+  const { name, number, id } = contactEdit;
   const [nameEdit, setNameEdit] = useState(name);
   const [numberEdit, setNumberEdit] = useState(number);
 
   const onClickOverlay = e => {
     if (e.target === e.currentTarget) {
-      handleCloseEditModal('');
+      handleCloseModal('');
     }
   };
 
   useEffect(() => {
     const onClickEscape = e => {
       if (e.key === 'Escape') {
-        handleCloseEditModal('');
+        handleCloseModal('');
       }
     };
     window.addEventListener('keydown', onClickEscape);
     return () => {
       window.removeEventListener('keydown', onClickEscape);
     };
-  }, [handleCloseEditModal]);
+  }, [handleCloseModal]);
 
   const handleSubmit = () => {
     const updateContact = { name: nameEdit, number: numberEdit, id };
     dispatch(api.updateContactThunk(updateContact));
-    handleCloseEditModal('');
+    handleCloseModal('');
   };
 
   return createPortal(
@@ -88,10 +89,10 @@ export const Modal = ({ contact, handleCloseEditModal }) => {
 };
 
 ModalWrapper.propTypes = {
-  handleCloseEditModal: PropTypes.func.isRequired,
-  contact: PropTypes.exact({
+  handleCloseModal: PropTypes.func,
+  contactEdit: PropTypes.exact({
     name: PropTypes.string,
     number: PropTypes.string,
     id: PropTypes.string,
-  }).isRequired,
+  }),
 };
