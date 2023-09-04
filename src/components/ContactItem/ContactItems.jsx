@@ -20,11 +20,6 @@ export const ContactItems = ({ contact }) => {
     setOpenEditModal(e);
   };
 
-  // const handleEditContact = contact => {
-  //   console.log('Close Modal contact :>> ', contact);
-  //   setOpenEditModal('');
-  // };
-
   return (
     <>
       <ContactItem>
@@ -56,7 +51,9 @@ export const ContactItems = ({ contact }) => {
 };
 
 ContactItems.propTypes = {
-  id: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  number: PropTypes.string.isRequired,
+  contact: PropTypes.exact({
+    name: PropTypes.string,
+    number: PropTypes.string,
+    id: PropTypes.string,
+  }).isRequired,
 };
